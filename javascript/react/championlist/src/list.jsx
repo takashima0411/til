@@ -1,9 +1,9 @@
 import React from 'react'
 
-export var List = React.createClass({
-	render: function(){
-		return (
-				<div>
+export class List  extends React.Component {
+    render() {
+        return 	(			
+        		<div>
 					<ul>
 						<li>hoge</li>
 						<li>hoge</li>
@@ -11,6 +11,6 @@ export var List = React.createClass({
 						<li>hoge</li>
 					</ul>
 				</div>
-			);
-	}
-});
+				);
+    }
+}
