@@ -9,8 +9,8 @@ export default class Champion extends React.Component {
         return 	(
             <div className="champion panel panel-default col-xs-6 col-sm-4 col-md-3 col-lg-2">
                 <div className="panel-body">
-                    <strong>{this.props.champion.name}</strong>
                     <img src={championImg} />
+                    <p><strong>{this.props.champion.name}</strong></p>
                 </div>
             </div>
         );
