@@ -5,19 +5,19 @@ import Champion from './Champion.jsx'
 export default class Main extends React.Component {
     constructor(props) {
         super(props);
-        this.state = "";
+        this.state = {};
     }
 
     componentDidMount() {
         var _this = this;
-        $.get('https://ddragon.leagueoflegends.com/cdn/6.10.1/data/jp_JP/champion.json', function (result) {
+        $.get('https://ddragon.leagueoflegends.com/cdn/6.10.1/data/ja_JP/champion.json', function (result) {
             _this.setState({champions: result.data});
         });
     }
 
     render() {
         var data = $.map(this.state.champions, function (champion, hoge) {
-            return (<Champion champion={champion}/>);
+            return (<Champion champion={champion} key={champion.name}/>);
         });
         return (
             <div className="MainComponent container-fluid">
