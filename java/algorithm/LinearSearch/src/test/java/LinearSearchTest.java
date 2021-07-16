@@ -9,7 +9,7 @@ public class LinearSearchTest {
         int[] array = {0,1,2};
         int target = 0;
 
-        int result = LinearSearch.linearSearch(array, array.length, target);
+        int result = LinearSearch.linearSearch(array, target);
 
         assertEquals(result, 0);
     }
@@ -19,7 +19,7 @@ public class LinearSearchTest {
         int[] array = {0,1,2};
         int target = 2;
 
-        int result = LinearSearch.linearSearch(array, array.length, target);
+        int result = LinearSearch.linearSearch(array, target);
 
         assertEquals(result, array.length - 1);
     }
@@ -29,7 +29,7 @@ public class LinearSearchTest {
         int[] array = {0,1,2};
         int target = 1;
 
-        int result = LinearSearch.linearSearch(array, array.length, target);
+        int result = LinearSearch.linearSearch(array, target);
 
         assertEquals(result, 1);
     }
@@ -39,7 +39,7 @@ public class LinearSearchTest {
         int[] array = {0,1,2,3,4,5};
         int target = 6;
 
-        int result = LinearSearch.linearSearch(array, array.length, target);
+        int result = LinearSearch.linearSearch(array, target);
 
         assertEquals(result, -1);
     }
