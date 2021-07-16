@@ -1,12 +1,23 @@
-group 'til'
-version '1.0-SNAPSHOT'
+plugins {
+    id 'java'
+    id 'idea'
+}
 
-apply plugin: 'java'
+group 'til'
+version '1.1'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testImplementation(platform('org.junit:junit-bom:5.7.2'))
+    testImplementation('org.junit.jupiter:junit-jupiter')
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
 }
